@@ -7,3 +7,10 @@ run backend
 run frontend
 - cd frontend
 - npm run dev
+
+
+deployment links
+
+backend: https://svtl-billing-system.onrender.com/
+
+frontend: https://svtl-billingsystem.netlify.app/
