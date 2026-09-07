@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000/api";
+const API_BASE_URL = "https://svtl-billing-system.onrender.com/api";
 
 export type Customer = {
   name: string;
@@ -7,6 +7,8 @@ export type Customer = {
   gstin?: string | null;
   place_of_supply: string;
 };
+
+
 
 export type Device = {
   model: string;
