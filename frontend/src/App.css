@@ -1350,8 +1350,7 @@ button {
   }
 
   html,
-  body,
-  #root {
+  body {
     width: 210mm !important;
     height: 297mm !important;
     margin: 0 !important;
@@ -1378,8 +1377,6 @@ button {
     width: 210mm !important;
     height: 297mm !important;
     display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
     background: #ffffff !important;
     overflow: hidden !important;
     backdrop-filter: none !important;
@@ -1513,3 +1510,4 @@ button {
     width: 40mm !important;
   }
 }
+
