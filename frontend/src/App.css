@@ -1362,14 +1362,18 @@ button {
     overflow: hidden !important;
   }
 
-  body * {
-    visibility: hidden !important;
-  }
+  body > * {
+  display: none !important;
+}
 
-  .invoice-preview-overlay,
-  .invoice-preview-overlay * {
-    visibility: visible !important;
-  }
+body > .invoice-preview-overlay {
+  display: block !important;
+}
+
+.invoice-preview-overlay,
+.invoice-preview-overlay * {
+  visibility: visible !important;
+}
 
   .invoice-preview-overlay {
     position: fixed !important;
