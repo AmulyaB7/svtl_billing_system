@@ -1350,7 +1350,8 @@ button {
   }
 
   html,
-  body {
+  body,
+  #root {
     width: 210mm !important;
     height: 297mm !important;
     margin: 0 !important;
@@ -1362,18 +1363,14 @@ button {
     overflow: hidden !important;
   }
 
-  body > * {
-  display: none !important;
-}
+  body * {
+    visibility: hidden !important;
+  }
 
-body > .invoice-preview-overlay {
-  display: block !important;
-}
-
-.invoice-preview-overlay,
-.invoice-preview-overlay * {
-  visibility: visible !important;
-}
+  .invoice-preview-overlay,
+  .invoice-preview-overlay * {
+    visibility: visible !important;
+  }
 
   .invoice-preview-overlay {
     position: fixed !important;
@@ -1381,6 +1378,8 @@ body > .invoice-preview-overlay {
     width: 210mm !important;
     height: 297mm !important;
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: #ffffff !important;
     overflow: hidden !important;
     backdrop-filter: none !important;
@@ -1489,12 +1488,6 @@ body > .invoice-preview-overlay {
     font-size: 9.5px !important;
   }
 
-  /*
-   * Signature area:
-   * The old invoice had Bank Details above this section.
-   * The new system intentionally does not include Bank Details,
-   * so the signature area absorbs some of that vertical space.
-   */
   .signature-section {
     min-height: 48mm !important;
     height: 48mm !important;
