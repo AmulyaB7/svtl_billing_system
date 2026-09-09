@@ -45,11 +45,7 @@ class CustomerCreate(BaseModel):
 class DeviceCreate(BaseModel):
     model: str = Field(..., min_length=1)
     color: Optional[str] = None
-    imei: Optional[str] = Field(
-        default=None,
-        min_length=15,
-        max_length=15,
-    )
+    imei: Optional[str] = None
     serial_number: Optional[str] = None
     issue_description: Optional[str] = None
 
@@ -63,34 +59,9 @@ class DeviceCreate(BaseModel):
 
         return value
 
-    @field_validator("imei")
-    @classmethod
-    def validate_imei(
-        cls,
-        value: Optional[str],
-    ) -> Optional[str]:
-        if value is None:
-            return None
-
-        value = value.strip()
-
-        if not value:
-            return None
-
-        if not value.isdigit():
-            raise ValueError(
-                "IMEI must contain exactly 15 digits"
-            )
-
-        if len(value) != 15:
-            raise ValueError(
-                "IMEI must contain exactly 15 digits"
-            )
-
-        return value
-
     @field_validator(
         "color",
+        "imei",
         "serial_number",
         "issue_description",
     )

@@ -451,19 +451,14 @@ function NewInvoice() {
             <input
               id="device-imei"
               type="text"
-              inputMode="numeric"
-              maxLength={15}
               value={device.imei}
               onChange={(event) =>
                 updateDevice(
                   "imei",
-                  event.target.value.replace(
-                    /\D/g,
-                    "",
-                  ),
+                  event.target.value,
                 )
               }
-              placeholder="15-digit IMEI"
+              placeholder="Enter IMEI / device identifier"
             />
           </div>
 
